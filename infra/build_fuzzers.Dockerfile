@@ -28,4 +28,6 @@ WORKDIR ${OSS_FUZZ_ROOT}/infra
 # Update infra source code.
 ADD . ${OSS_FUZZ_ROOT}/infra
 
+RUN git clone --depth 1 https://github.com/kubeedge/kubeedge
+
 RUN python3 -m pip install -r ${OSS_FUZZ_ROOT}/infra/cifuzz/requirements.txt
