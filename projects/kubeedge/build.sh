@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 ################################################################################
-sed 's/go 1.16/go 1.19 /g' -i $SRC/kubeedge/go.mod
 cd $SRC/kubeedge && go mod tidy
 
 $SRC/cncf-fuzzing/projects/kubeedge/build.sh
