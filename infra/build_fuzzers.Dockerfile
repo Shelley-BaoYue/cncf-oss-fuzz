@@ -29,3 +29,5 @@ WORKDIR ${OSS_FUZZ_ROOT}/infra
 ADD . ${OSS_FUZZ_ROOT}/infra
 
 RUN python3 -m pip install -r ${OSS_FUZZ_ROOT}/infra/cifuzz/requirements.txt
+
+RUN sed -i 's/cncf\//Shelley-BaoYue\//g' ${OSS_FUZZ_ROOT}/projects/kubeedge/Dockerfile
